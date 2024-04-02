@@ -4,21 +4,31 @@ import styled from 'styled-components'
 
 function StartGame() {
   return (
-    <div>
+    <Container>
     <img src="/images/dices.png" alt="dices" />
-        <div>
+        <div className='content'>
                 <h1>Dice Game</h1>
                 <Button>Play Now</Button>
         </div>
-    </div>
+    </Container>
   )
 }
 
 export default StartGame
 
 const Container=styled.div`
-max-width:1180px;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 
+.content{
+    h1{
+        font-size:96px;
+        white-space:no-wrap;
+    }
+
+}
 `;
 
 const Button=styled.button`
@@ -27,5 +37,13 @@ background:black;
 color:white;
 border-radius:5px;
 min-width:220px;
-border:none;
+border: 1px solid transparent;
+font-size:20px;
+cursor:pointer;
+
+&:hover{
+    background-color:white;
+    color:black;
+    border: 1px solid black;
+}
 `;
